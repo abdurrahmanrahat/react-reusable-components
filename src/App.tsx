@@ -20,7 +20,7 @@ function App() {
 
   return (
     <Container>
-      <div className="h-screen w-full flex justify-center items-center">
+      <div>
         {/* <div>
           <Button onClick={() => setModal((prev) => !prev)}>Open Modal</Button>
           <Modal isOpen={modal} onClose={handleModalClose}>
