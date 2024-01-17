@@ -1,4 +1,5 @@
-@import './styles/Button.css';
+@import "./styles/Button.css";
+@import "./styles/Form.css";
 
 @tailwind base;
 @tailwind components;
