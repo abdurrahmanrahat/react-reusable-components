@@ -1,23 +1,19 @@
-import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { FieldValues, useForm } from "react-hook-form";
 import cn from "../../utils/cn";
 import Button from "../ui/Button";
-
-// zod validator schema
-const SignUpSchema = z.object({
-  name: z.string(),
-  email: z.string().email(),
-  password: z.string().min(8, "Too Short"),
-});
+import { SignUpSchema, TNormalForm } from "./validation";
 
 const NormalForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<TNormalForm>({
+    resolver: zodResolver(SignUpSchema),
+  });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: FieldValues) => {
     console.log(data);
   };
 
@@ -40,13 +36,11 @@ const NormalForm = () => {
           <label className="block" htmlFor="name">
             Name
           </label>
-          <input
-            type="text"
-            id="name"
-            {...register("name", { required: true })}
-          />
+          <input type="text" id="name" {...register("name")} />
           {errors.name && (
-            <span className="text-xs text-[#EC5990]">Required Field</span>
+            <span className="text-xs text-[#EC5990]">
+              {errors.name.message}
+            </span>
           )}
         </div>
         <div className="w-full max-w-md">
@@ -59,6 +53,11 @@ const NormalForm = () => {
             id="email"
             {...register("email")}
           />
+          {errors.email && (
+            <span className="text-xs text-[#EC5990]">
+              {errors.email.message}
+            </span>
+          )}
         </div>
         <div className="w-full max-w-md">
           <label className="block" htmlFor="password">
@@ -71,7 +70,9 @@ const NormalForm = () => {
             {...register("password", { minLength: 7 })}
           />
           {errors.password && (
-            <span className="text-xs text-[#EC5990]">Too Short</span>
+            <span className="text-xs text-[#EC5990]">
+              {errors.password.message}
+            </span>
           )}
         </div>
         {/* <div className="w-full max-w-md">
