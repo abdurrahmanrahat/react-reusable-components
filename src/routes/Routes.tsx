@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App";
 import AdminLayout from "../components/layout/AdminLayout";
 import About from "../pages/About/About";
+import Animation from "../pages/Animation/Animation";
 import Home from "../pages/Home/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>,
+    element: <Animation></Animation>,
     children: [
       {
         index: true,

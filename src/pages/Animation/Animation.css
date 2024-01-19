@@ -1,0 +1,25 @@
+.main {
+    /* border: 2px solid #3D0066; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    /* position: relative; */
+}
+
+.box-01 {
+    /* position: absolute; */
+    background-color: #A7020A;
+    height: 150px;
+    width: 150px;
+    transition-duration: 800ms;
+    /* transform-origin: top; */
+}
+
+.box-01:hover {
+    /* transform: translateY(150px); */
+    /* transform: scale(0.9); */
+    /* transform: rotate(45deg); */
+    transform: skew(45deg)
+}
