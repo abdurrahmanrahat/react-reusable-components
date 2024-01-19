@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import AdminLayout from "../components/layout/AdminLayout";
 import About from "../pages/About/About";
-import ClipPath from "../pages/ClipPath/ClipPath";
+import AniWithJs from "../pages/AniWithJs/AniWithJs";
 import Home from "../pages/Home/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <ClipPath></ClipPath>,
+    element: <AniWithJs></AniWithJs>,
     children: [
       {
         index: true,
