@@ -27,7 +27,7 @@
     transform: translateZ(100px);
 }  */
 
-.btn {
+/* .btn { 
     border: 2px solid tomato;
     color: tomato;
     padding: 10px 20px;
@@ -49,7 +49,7 @@
     transition-property: all;
     transition-duration: 500ms;
     transition-timing-function: ease;
-    /* transform: rotate(120deg); */
+    transform: rotate(120deg); 
     transform: scaleX(0);
     z-index: -1;
 }
@@ -62,4 +62,37 @@
 .btn:hover::after {
     transform: scaleX(1);
     background-color: tomato;
+} */
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: #3D0066;
+    animation-name: moving;
+    animation-duration: 1000ms;
+    /* animation-fill-mode: forwards; */
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes moving {
+    0% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(250px);
+    }
+
+    50% {
+        transform: translate(500px);
+    }
+
+    75% {
+        transform: translate(250px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
 }
