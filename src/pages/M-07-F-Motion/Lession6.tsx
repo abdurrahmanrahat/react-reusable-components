@@ -8,7 +8,8 @@ const Lession6 = () => {
   useEffect(() => {
     controls.start((i) => ({ x: 200, transition: { delay: i * 1 } }));
   }, []);
-  // আমরা custom ইউজ করে value দিলে সেইটা callback এ পেয়ে যাবো, তারপর সেইটা ধরে something অ্যানিমেশন করতে পারি।
+  // আমরা custom ইউজ করে value দিলে সেইটা callback এ পেয়ে যাবো, তারপর সেইটা ধরে
+  // something অ্যানিমেশন করতে পারি।
 
   //   const handleToggle = () => {
   //     setToggle(!toggle);
