@@ -2,18 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import AdminLayout from "../components/layout/AdminLayout";
 import About from "../pages/About/About";
 import Home from "../pages/Home/Home";
-import Lession8 from "../pages/M-07-F-Motion/Lession8";
+import Lession9 from "../pages/M-07-F-Motion/Lession9";
 
 const router = createBrowserRouter([
   {
     path: "/",
     // element: <AniWithJs></AniWithJs>,
-    element: (
-      <div>
-        <div className="h-[200vh] w-full bg-[#3D0066]"></div>
-        <Lession8></Lession8>,
-      </div>
-    ),
+    element: <Lession9></Lession9>,
     children: [
       {
         index: true,
