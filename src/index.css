@@ -21,6 +21,6 @@
 
 @layer components {
     .btn-primary {
-        @apply px-4 py-3 bg-[#3D0066] text-white text-[18px] rounded
+        @apply px-4 py-3 bg-[#3D0066] text-white text-[18px] font-semibold rounded
     }
 }
